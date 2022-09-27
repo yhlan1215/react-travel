@@ -1,11 +1,16 @@
 import React from "react";
 import { Menu } from 'antd'
 import { sideMenuList } from './mockup'
-import './SideMenu.css'
+import styled from "styled-components";
+
+const MenuSide = styled(Menu)`
+    width: 256px;
+    border: 5px solid #91c0f0 !important;
+`
 
 export const SideMenu = () => {
     return(
-        <Menu
+        <MenuSide
         mode="vertical"
         className="side-menu" 
         items={

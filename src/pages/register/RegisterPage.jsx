@@ -1,5 +1,11 @@
 import React from "react";
+import { UserLayout } from "../../layouts";
+import { RegisterForm } from "../../components";
 
 export const RegisterPage = () => {
-    return<h1>注册页面</h1>
+    return(
+        <UserLayout>
+            <RegisterForm/>
+        </UserLayout>
+    )
 }

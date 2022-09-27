@@ -1,11 +1,13 @@
 import React from "react";
 import { Layout, Typography } from 'antd'
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
+    const {t} = useTranslation()
     return(
         <Layout.Footer>
             <Typography.Title>
-                版权所有@React旅游网
+                {t('footer.detail')}
             </Typography.Title>
         </Layout.Footer>
     )

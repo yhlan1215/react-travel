@@ -1,13 +1,26 @@
 import React from "react";
 import { Row, Col, Divider, Image } from 'antd'
 import { ProductImage } from "./ProductImage";
+import styled from "styled-components";
+
+const Content = styled.div`
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+`
+const SideImage = styled(Image)`
+    width: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+`
 
 export const ProductCollection = ({title,sideImage,product}) => {
-    return<div className="content">
+    return<Content>
         <Divider orientation="left">{title}</Divider>
         <Row>
             <Col span={4}>
-                <Image src={sideImage} className='side-image' alt=''/>
+                <SideImage src={sideImage}  alt=''/>
             </Col>
             <Col span={20}>
                 <Row>
@@ -86,5 +99,5 @@ export const ProductCollection = ({title,sideImage,product}) => {
                 </Row>
             </Col>
         </Row>
-    </div>
+    </Content>
 }
